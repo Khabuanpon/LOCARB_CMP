@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Flimate Carbon Management Platform &mdash; Carbon Management Platform 0.1 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="#" class="icon icon-home"> Carbon Management Platform
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <!-- Local TOC -->
+              <div class="local-toc"><ul>
+<li><a class="reference internal" href="#"><strong>Flimate Carbon Management Platform</strong></a></li>
+<li><a class="reference internal" href="#ghgs-calculation"><strong>GHGs Calculation</strong></a></li>
+<li><a class="reference internal" href="#description"><strong>Description</strong></a></li>
+<li><a class="reference internal" href="#emission-factor"><strong>Emission Factor</strong></a></li>
+<li><a class="reference internal" href="#scope-1-direct-ghg-emissions">Scope 1 (Direct GHG Emissions)</a></li>
+<li><a class="reference internal" href="#scope-2-electricity-indirect-ghg-emissions">Scope 2 (Electricity indirect GHG emissions)</a></li>
+<li><a class="reference internal" href="#scope-3-other-indirect-ghg-emissions">Scope 3 (Other indirect GHG emissions)</a></li>
+</ul>
+</div>
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="#">Carbon Management Platform</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="#" class="icon icon-home"></a> &raquo;</li>
+      <li><strong>Flimate Carbon Management Platform</strong></li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/index.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="flimate-carbon-management-platform">
+<h1><strong>Flimate Carbon Management Platform</strong><a class="headerlink" href="#flimate-carbon-management-platform" title="Permalink to this headline"></a></h1>
+<p><strong>Carbon Footprint for Organization</strong> (CFO) is a type of method for visualizing the amount of greenhouse gas emissions from an organization’s operations. which will lead to the determination of management guidelines and manage to reduce greenhouse gas emissions effectively both at the factory level industrial level and national level. Choosing emission factors is one of the most important part for CFO calculating. It pulls data from the <a class="reference external" href="http://thaicarbonlabel.tgo.or.th/admin/uploadfiles/emission/ts_578cd2cb78.pdf/">TGO Emission Factor</a></p>
+</section>
+<section id="ghgs-calculation">
+<h1><strong>GHGs Calculation</strong><a class="headerlink" href="#ghgs-calculation" title="Permalink to this headline"></a></h1>
+<p><strong>Outputs</strong></p>
+<p>Y       =     Total GHG emission of Organization</p>
+<p>Sc<sub>i,j</sub>    =     GHG emission of scope <cite>j</cite></p>
+<p>y<sub>i,j</sub> =       GHG emission of activity by source <cite>i</cite> scope <cite>j</cite></p>
+<p><strong>Inputs</strong></p>
+<p>x<sub>i,j</sub> =       Quantity of activity by source <cite>i</cite> scope <cite>j</cite></p>
+<p>EF<sub>i,j</sub>=       Emission factor of source <cite>i</cite> scope <cite>j</cite></p>
+<p><strong>Cost function</strong></p>
+<div class="math notranslate nohighlight">
+\[Y = \sum(Sc)\]</div>
+<div class="math notranslate nohighlight">
+\[Sc = \sum(y)\]</div>
+<div class="math notranslate nohighlight">
+\[y = \sum((x)(EF))\]</div>
+<p><strong>Scj (Scope of Emission)</strong></p>
+<p>Sc<sub>1</sub>  =        y<sub>j(:41)</sub></p>
+<p>Sc<sub>1s</sub> =        y<sub>j(:42:48)</sub></p>
+<p>Sc<sub>2</sub>  =       y<sub>j(:49)</sub></p>
+<p>Sc<sub>3</sub>  =       y<sub>j(:50)</sub></p>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+<section id="description">
+<h1><strong>Description</strong><a class="headerlink" href="#description" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id1">
+<caption><span class="caption-text"><strong>Source (Abbreviation and Description)</strong></span><a class="headerlink" href="#id1" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 18%" />
+<col style="width: 24%" />
+<col style="width: 59%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Scope 1</strong></p></th>
+<th class="head"><p><strong>Source i</strong></p></th>
+<th class="head"><p><strong>Description</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>No.</strong></p></td>
+<td><p><strong>Stationary Combustion</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>NG<sub>scf</sub></p></td>
+<td><p>Amount of Natural Gas in the unit of <cite>scf</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>NG<sub>MJ</sub></p></td>
+<td><p>Amount of Natural Gas in the unit of <cite>MJ</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>L<sub>kg</sub></p></td>
+<td><p>Amount of Lignite in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>FOA<sub>L</sub></p></td>
+<td><p>Amount of Fuel Oil A in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>FOC<sub>L</sub></p></td>
+<td><p>Amount of Fuel Oil C in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>SCD<sub>L</sub></p></td>
+<td><p>Amount of Diesel oil in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>A<sub>kg</sub></p></td>
+<td><p>Amount of Anthracite in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>S<sub>kg</sub></p></td>
+<td><p>Amount of Sub-bituminous coal in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>JK<sub>L</sub></p></td>
+<td><p>Amount of Jet Kerosene in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>SLPG<sub>L</sub></p></td>
+<td><p>Amount of Stationary combustion of LPG in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>SLPG<sub>kg</sub></p></td>
+<td><p>Amount of Stationary combustion of LPG in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>MG<sub>L</sub></p></td>
+<td><p>Amount of Motor Gasoline in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>FW<sub>kg</sub></p></td>
+<td><p>Amount of Fuel Wood in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>B<sub>kg</sub></p></td>
+<td><p>Amount of Bagasses in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>P<sub>kg</sub></p></td>
+<td><p>Amount of Palm kernel shell in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>C<sub>kg</sub></p></td>
+<td><p>Amount of Cob in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>17</p></td>
+<td><p>B<sub>q</sub></p></td>
+<td><p>Amount of Biogas in the unit of m<sup>3</sup></p></td>
+</tr>
+<tr class="row-even"><td><p>18</p></td>
+<td><p>FWCO<sub>kg</sub></p></td>
+<td><p>Amount of Fuel Wood (CO<sub>2</sub>only) in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>19</p></td>
+<td><p>BCO<sub>kg</sub></p></td>
+<td><p>Amount of Bagasse (CO<sub>2</sub>only) in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>20</p></td>
+<td><p>PKSCO<sub>kg</sub></p></td>
+<td><p>Amount of Palm Kernel Shell (CO<sub>2</sub>only) in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>21</p></td>
+<td><p>CCO<sub>kg</sub></p></td>
+<td><p>Amount of Cob (CO<sub>2</sub>only) in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>22</p></td>
+<td><p>BCO<sub>q</sub></p></td>
+<td><p>Amount of Biogas (CO<sub>2</sub>only) in the unit of m<sup>3</sup></p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><strong>Mobile Combustion (On-road)</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>23</p></td>
+<td><p>MGU<sub>L</sub></p></td>
+<td><p>Amount of mobile combust Motor Gasoline (uncontrolled) in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>24</p></td>
+<td><p>MGOC<sub>L</sub></p></td>
+<td><p>Amount of mobile combust Motor Gasoline (oxidation catalyst) in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>25</p></td>
+<td><p>MGLM<sub>L</sub></p></td>
+<td><p>Amount of mobile combust Motor Gasoline (low-mileage light-duty vehicle vintage 1995 or later in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>26</p></td>
+<td><p>MGD<sub>L</sub></p></td>
+<td><p>Amount of mobile combust Motor Gasoline (oxidation catalyst) in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>27</p></td>
+<td><p>CNG<sub>kg</sub></p></td>
+<td><p>Amount of Mobile combust CNG in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>28</p></td>
+<td><p>MLPG<sub>L</sub></p></td>
+<td><p>Amount of Mobile combust LPG in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>29</p></td>
+<td><p>MLPG<sub>kg</sub></p></td>
+<td><p>Amount of Mobile combust LPG in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><strong>Mobile Combustion (Off-road)</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>30</p></td>
+<td><p>DA<sub>L</sub></p></td>
+<td><p>Amount of Diesel in Agriculture usage in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>31</p></td>
+<td><p>DF<sub>L</sub></p></td>
+<td><p>Amount of Diesel in Forestry usage in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>32</p></td>
+<td><p>DI<sub>L</sub></p></td>
+<td><p>Amount of Diesel in Industry usage in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>33</p></td>
+<td><p>DH<sub>L</sub></p></td>
+<td><p>Amount of Diesel in Household usage in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>34</p></td>
+<td><p>MG4A<sub>L</sub></p></td>
+<td><p>Amount of 4 stroke Motor Gasoline in Agriculture usage in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>35</p></td>
+<td><p>MG4F<sub>L</sub></p></td>
+<td><p>Amount of 4 stroke Motor Gasoline in Forestry usage in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>36</p></td>
+<td><p>MG4I<sub>L</sub></p></td>
+<td><p>Amount of 4 stroke Motor Gasoline in Industry usage in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>37</p></td>
+<td><p>MG4H<sub>L</sub></p></td>
+<td><p>Amount of 4 stroke Motor Gasoline in Household usage in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>38</p></td>
+<td><p>MG2A<sub>L</sub></p></td>
+<td><p>Amount of 2 stroke Motor Gasoline in Agriculture usage in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>39</p></td>
+<td><p>MG2F<sub>L</sub></p></td>
+<td><p>Amount of 2 stroke Motor Gasoline in Forestry usage in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>40</p></td>
+<td><p>MG2I<sub>L</sub></p></td>
+<td><p>Amount of 2 stroke Motor Gasoline in Industry usage in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>41</p></td>
+<td><p>MG2H<sub>L</sub></p></td>
+<td><p>Amount of 2 stroke Motor Gasoline in Household usage in the unit of <cite>liter</cite></p></td>
+</tr>
+<tr class="row-even"><td></td>
+<td><p><strong>Refrigerants</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>42</p></td>
+<td><p>R22<sub>kg</sub></p></td>
+<td><p>Amount of R-22 in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>43</p></td>
+<td><p>R32<sub>kg</sub></p></td>
+<td><p>Amount of R-32 in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>44</p></td>
+<td><p>R125<sub>kg</sub></p></td>
+<td><p>Amount of R-125 in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>45</p></td>
+<td><p>R134<sub>kg</sub></p></td>
+<td><p>Amount of R-134 in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>46</p></td>
+<td><p>R134a<sub>kg</sub></p></td>
+<td><p>Amount of R-134a in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-even"><td><p>47</p></td>
+<td><p>R143<sub>kg</sub></p></td>
+<td><p>Amount of R-143 in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p>48</p></td>
+<td><p>R143a<sub>kg</sub></p></td>
+<td><p>Amount of R-143a in the unit of <cite>kg</cite></p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Scope 2</strong></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p><strong>Electricity</strong></p></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>49</p></td>
+<td><p>E<sub>kWh</sub></p></td>
+<td><p>Electricity usage in the unit of <cite>kWh</cite></p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Scope 3</strong></p></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>50</p></td>
+<td><p>ECi</p></td>
+<td><p>Distance of employees’ commuting of i-th number</p></td>
+</tr>
+<tr class="row-odd"><td><p>51</p></td>
+<td><p>WW</p></td>
+<td><p>Amount of wastewater</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="emission-factor">
+<h1><strong>Emission Factor</strong><a class="headerlink" href="#emission-factor" title="Permalink to this headline"></a></h1>
+</section>
+<section id="scope-1-direct-ghg-emissions">
+<h1>Scope 1 (Direct GHG Emissions)<a class="headerlink" href="#scope-1-direct-ghg-emissions" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id2">
+<caption><span class="caption-text"><strong>Source and Emission Factor for Scope1</strong></span><a class="headerlink" href="#id2" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Source i</strong></p></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"><p><strong>Emission Factor (EF)</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Scope 1</strong></p></td>
+<td><p>CO<sub>2</sub></p></td>
+<td><p>CH<sub>4</sub></p></td>
+<td><p>N<sub>2</sub>O</p></td>
+<td><p><strong>Total</strong></p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>[kg CO2/unit]</p></td>
+<td><p>[kg CH4/unit]</p></td>
+<td><p>[kg N2O/unit]</p></td>
+<td><p>[kg CO2eq/unit]</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Stationary Combustion</strong></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>NG<sub>scf</sub></p></td>
+<td><p>5.72E-02</p></td>
+<td><p>1.02E-06</p></td>
+<td><p>1.02E-07</p></td>
+<td><p>5.73E-02</p></td>
+</tr>
+<tr class="row-even"><td><p>NG<sub>MJ</sub></p></td>
+<td><p>5.61E-02</p></td>
+<td><p>1.00E-06</p></td>
+<td><p>1.00E-07</p></td>
+<td><p>5.62E-02</p></td>
+</tr>
+<tr class="row-odd"><td><p>L<sub>kg</sub></p></td>
+<td><p>1.06E+00</p></td>
+<td><p>1.05E-05</p></td>
+<td><p>1.57E-05</p></td>
+<td><p>1.06E+00</p></td>
+</tr>
+<tr class="row-even"><td><p>FOA<sub>L</sub></p></td>
+<td><p>3.21E+00</p></td>
+<td><p>1.24E-04</p></td>
+<td><p>2.49E-05</p></td>
+<td><p>3.22E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p>FOC<sub>L</sub></p></td>
+<td><p>3.24E+00</p></td>
+<td><p>1.25E-04</p></td>
+<td><p>2.51E-05</p></td>
+<td><p>3.25E+00</p></td>
+</tr>
+<tr class="row-even"><td><p>SCD<sub>L</sub></p></td>
+<td><p>2.70E+00</p></td>
+<td><p>1.09E-04</p></td>
+<td><p>2.19E-05</p></td>
+<td><p>2.71E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p>A<sub>kg</sub></p></td>
+<td><p>3.09E+00</p></td>
+<td><p>3.14E-05</p></td>
+<td><p>4.71E-05</p></td>
+<td><p>3.10E+00</p></td>
+</tr>
+<tr class="row-even"><td><p>S<sub>kg</sub></p></td>
+<td><p>2.53E+00</p></td>
+<td><p>2.64E-05</p></td>
+<td><p>3.96E-05</p></td>
+<td><p>2.55E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p>JK<sub>L</sub></p></td>
+<td><p>2.47E+00</p></td>
+<td><p>1.04E-04</p></td>
+<td><p>2.07E-05</p></td>
+<td><p>2.48E+00</p></td>
+</tr>
+<tr class="row-even"><td><p>SLPG<sub>L</sub></p></td>
+<td><p>1.68E+00</p></td>
+<td><p>2.66E-05</p></td>
+<td><p>2.66E-06</p></td>
+<td><p>1.68E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p>SLPG<sub>kg</sub></p></td>
+<td><p>3.11E+00</p></td>
+<td><p>4.93E-05</p></td>
+<td><p>4.93E-06</p></td>
+<td><p>3.11E+00</p></td>
+</tr>
+<tr class="row-even"><td><p>MG<sub>L</sub></p></td>
+<td><p>2.18E+00</p></td>
+<td><p>9.44E-05</p></td>
+<td><p>1.89E-05</p></td>
+<td><p>2.19E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p>FW<sub>kg</sub></p></td>
+<td></td>
+<td><p>4.80E-04</p></td>
+<td><p>6.40E-05</p></td>
+<td><p>3.04E-02</p></td>
+</tr>
+<tr class="row-even"><td><p>B<sub>kg</sub></p></td>
+<td></td>
+<td><p>2.26E-04</p></td>
+<td><p>3.01E-05</p></td>
+<td><p>1.43E-02</p></td>
+</tr>
+<tr class="row-odd"><td><p>P<sub>kg</sub></p></td>
+<td></td>
+<td><p>5.56E-04</p></td>
+<td><p>7.41E-05</p></td>
+<td><p>3.52E-02</p></td>
+</tr>
+<tr class="row-even"><td><p>C<sub>kg</sub></p></td>
+<td></td>
+<td><p>5.03E-04</p></td>
+<td><p>6.71E-05</p></td>
+<td><p>3.19E-02</p></td>
+</tr>
+<tr class="row-odd"><td><p>B<sub>q</sub></p></td>
+<td></td>
+<td><p>2.09E-05</p></td>
+<td><p>2.09E-06</p></td>
+<td><p>1.14E-03</p></td>
+</tr>
+<tr class="row-even"><td><p>FWCO<sub>kg</sub></p></td>
+<td><p>1.79E+00</p></td>
+<td></td>
+<td></td>
+<td><p>1.79E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p>BCO<sub>kg</sub></p></td>
+<td><p>7.53E-01</p></td>
+<td></td>
+<td></td>
+<td><p>7.53E-01</p></td>
+</tr>
+<tr class="row-even"><td><p>PKSCO<sub>kg</sub></p></td>
+<td><p>1.85E+00</p></td>
+<td></td>
+<td></td>
+<td><p>1.85E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p>CCO<sub>kg</sub></p></td>
+<td><p>1.68E+00</p></td>
+<td></td>
+<td></td>
+<td><p>1.68E+00</p></td>
+</tr>
+<tr class="row-even"><td><p>BCO<sub>q</sub></p></td>
+<td><p>1.14E+00</p></td>
+<td></td>
+<td></td>
+<td><p>1.14E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Mobile Combustion (On-road)</strong></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>MGU<sub>L</sub></p></td>
+<td><p>2.18E+00</p></td>
+<td><p>1.04E-03</p></td>
+<td><p>1.01E-04</p></td>
+<td><p>2.24E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p>MGOC<sub>L</sub></p></td>
+<td><p>2.18E+00</p></td>
+<td><p>7.87E-04</p></td>
+<td><p>2.52E-04</p></td>
+<td><p>2.27E+00</p></td>
+</tr>
+<tr class="row-even"><td><p>MGLM<sub>L</sub></p></td>
+<td><p>2.18E+00</p></td>
+<td><p>1.20E-04</p></td>
+<td><p>1.79E-04</p></td>
+<td><p>2.23E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p>MGD<sub>L</sub></p></td>
+<td><p>2.70E+00</p></td>
+<td><p>1.42E-04</p></td>
+<td><p>1.42E-04</p></td>
+<td><p>2.74E+00</p></td>
+</tr>
+<tr class="row-even"><td><p>CNG<sub>kg</sub></p></td>
+<td><p>2.13E+00</p></td>
+<td><p>3.49E-03</p></td>
+<td><p>1.14E-04</p></td>
+<td><p>2.25E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p>MLPG<sub>L</sub></p></td>
+<td><p>1.68E+00</p></td>
+<td><p>1.65E-03</p></td>
+<td><p>5.32E-06</p></td>
+<td><p>1.73E+00</p></td>
+</tr>
+<tr class="row-even"><td><p>MLPG<sub>kg</sub></p></td>
+<td><p>3.11E+00</p></td>
+<td><p>3.06E-03</p></td>
+<td><p>9.86E-06</p></td>
+<td><p>3.20E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>Mobile Combustion (Off-road)</strong></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-even"><td><p>DA<sub>L</sub></p></td>
+<td><p>2.70E+00</p></td>
+<td><p>1.51E-04</p></td>
+<td><p>1.04E-03</p></td>
+<td><p>2.98E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p>DF<sub>L</sub></p></td>
+<td><p>2.70E+00</p></td>
+<td><p>1.51E-04</p></td>
+<td><p>1.04E-03</p></td>
+<td><p>2.98E+00</p></td>
+</tr>
+<tr class="row-even"><td><p>DI<sub>L</sub></p></td>
+<td><p>2.70E+00</p></td>
+<td><p>1.51E-04</p></td>
+<td><p>1.04E-03</p></td>
+<td><p>2.98E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p>DH<sub>L</sub></p></td>
+<td><p>2.70E+00</p></td>
+<td><p>1.51E-04</p></td>
+<td><p>1.04E-03</p></td>
+<td><p>2.98E+00</p></td>
+</tr>
+<tr class="row-even"><td><p>MG4A<sub>L</sub></p></td>
+<td><p>2.18E+00</p></td>
+<td><p>2.52E-03</p></td>
+<td><p>6.30E-05</p></td>
+<td><p>2.27E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p>MG4F<sub>L</sub></p></td>
+<td><p>2.18E+00</p></td>
+<td><p>0.00E+00</p></td>
+<td><p>0.00E+00</p></td>
+<td><p>2.18E+00</p></td>
+</tr>
+<tr class="row-even"><td><p>MG4I<sub>L</sub></p></td>
+<td><p>2.18E+00</p></td>
+<td><p>1.57E-03</p></td>
+<td><p>6.30E-05</p></td>
+<td><p>2.24E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p>MG4H<sub>L</sub></p></td>
+<td><p>2.18E+00</p></td>
+<td><p>3.78E-03</p></td>
+<td><p>6.30E-05</p></td>
+<td><p>2.30E+00</p></td>
+</tr>
+<tr class="row-even"><td><p>MG2A<sub>L</sub></p></td>
+<td><p>2.18E+00</p></td>
+<td><p>4.41E-03</p></td>
+<td><p>1.26E-05</p></td>
+<td><p>2.31E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p>MG2F<sub>L</sub></p></td>
+<td><p>2.18E+00</p></td>
+<td><p>5.35E-03</p></td>
+<td><p>1.26E-05</p></td>
+<td><p>2.33E+00</p></td>
+</tr>
+<tr class="row-even"><td><p>MG2I<sub>L</sub></p></td>
+<td><p>2.18E+00</p></td>
+<td><p>4.09E-03</p></td>
+<td><p>1.26E-05</p></td>
+<td><p>2.30E+00</p></td>
+</tr>
+<tr class="row-odd"><td><p>MG2H<sub>L</sub></p></td>
+<td><p>2.18E+00</p></td>
+<td><p>5.67E-03</p></td>
+<td><p>1.26E-05</p></td>
+<td><p>2.34E+00</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Refrigerants</strong></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>R22<sub>kg</sub></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>1.76E+03</p></td>
+</tr>
+<tr class="row-even"><td><p>R32<sub>kg</sub></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>6.77E+02</p></td>
+</tr>
+<tr class="row-odd"><td><p>R125<sub>kg</sub></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>3.17E+03</p></td>
+</tr>
+<tr class="row-even"><td><p>R134<sub>kg</sub></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>1.12E+03</p></td>
+</tr>
+<tr class="row-odd"><td><p>R134a<sub>kg</sub></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>1.30E+03</p></td>
+</tr>
+<tr class="row-even"><td><p>R143<sub>kg</sub></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>3.28E+02</p></td>
+</tr>
+<tr class="row-odd"><td><p>R143a<sub>kg</sub></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td><p>4.80E+03</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="scope-2-electricity-indirect-ghg-emissions">
+<h1>Scope 2 (Electricity indirect GHG emissions)<a class="headerlink" href="#scope-2-electricity-indirect-ghg-emissions" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id3">
+<caption><span class="caption-text"><strong>Source and Emission Factor for Scope2</strong></span><a class="headerlink" href="#id3" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Source i</strong></p></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"><p><strong>Emission Factor (EF)</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Scope 2</strong></p></td>
+<td><p>CO<sub>2</sub></p></td>
+<td><p>CH<sub>4</sub></p></td>
+<td><p>N<sub>2</sub>O</p></td>
+<td><p><strong>Total</strong></p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>[kg CO2/unit]</p></td>
+<td><p>[kg CH4/unit]</p></td>
+<td><p>[kg N2O/unit]</p></td>
+<td><p>[kg CO2eq/unit]</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>Electricity</strong></p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>E<sub>kwh</sub></p></td>
+<td><p>4.95E-01</p></td>
+<td><p>6.10E-05</p></td>
+<td><p>1.04E-05</p></td>
+<td><p>5.00E-01</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="scope-3-other-indirect-ghg-emissions">
+<h1>Scope 3 (Other indirect GHG emissions)<a class="headerlink" href="#scope-3-other-indirect-ghg-emissions" title="Permalink to this headline"></a></h1>
+<table class="colwidths-given docutils align-default" id="id4">
+<caption><span class="caption-text"><strong>Source and Emission Factor for Scope3</strong></span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 11%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+<col style="width: 22%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Source i</strong></p></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"></th>
+<th class="head"><p><strong>Emission Factor (EF)</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>Scope 3</strong></p></td>
+<td><p>CO<sub>2</sub></p></td>
+<td><p>CH<sub>4</sub></p></td>
+<td><p>N<sub>2</sub>O</p></td>
+<td><p><strong>Total</strong></p></td>
+</tr>
+<tr class="row-odd"><td></td>
+<td><p>[kg CO2/unit]</p></td>
+<td><p>[kg CH4/unit]</p></td>
+<td><p>[kg N2O/unit]</p></td>
+<td><p>[kg CO2eq/unit]</p></td>
+</tr>
+<tr class="row-even"><td><p>ECi</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="row-odd"><td><p>WW</p></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+
+
+           </div>
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, LC &amp; Flimate.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
